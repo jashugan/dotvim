@@ -14,24 +14,15 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" Mapping task list
-map <leader>td <Plug>TaskList
-
 " Mapping NERD Tree
 map <leader>n :NERDTreeToggle<CR>
-
-" Mapping Rope plugin
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
+let NERDTreeIgnore=['\.pyc$']
 
 " Mapping Gundo
 map <leader>g :GundoToggle<CR>
 
 " Mapping Ack (for find in project functionality)
 nmap <leader>a <Esc>:Ack!
-
-" Automatically run all tests
-map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 
 " Syntax Highlighting and color
 syntax on
