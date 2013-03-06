@@ -11,3 +11,4 @@ git clone https://github.com/altercation/vim-colors-solarized bundle/vim-colors-
 git clone https://github.com/tpope/vim-markdown bundle/vim-markdown
 git clone https://github.com/tpope/vim-surround.git bundle/surround
 git clone https://github.com/vim-scripts/closetag.vim.git bundle/closetag.vim
+git clone https://github.com/elzr/vim-json bundle/vim-json

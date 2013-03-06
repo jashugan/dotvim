@@ -14,6 +14,10 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+" Change behavior of shift+Y to be similar to shift+C and shift+D (i.e.
+" copy everything under the cursor until the end of the line.
+noremap Y y$
+
 " Mapping NERD Tree
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$']
