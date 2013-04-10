@@ -20,6 +20,12 @@ set hlsearch
 " save them first.
 set hidden
 
+" Set line numbers
+set number
+
+" Erasing whitespace characters with backspace in insert mode
+set backspace=indent,eol,start
+
 " }}}
 
 " Mappings ---------------------------- {{{
@@ -48,8 +54,9 @@ nnoremap <c-h> <c-w>h
 " copy everything under the cursor until the end of the line.
 nnoremap Y y$
 
-" Escape out of insert mode. Disable normal <esc> for now.
+" Escape out of insert mode. Disable normal <esc> for now. 
 inoremap jk <esc>
+inoremap <esc> <nop>
 
 " Press Space to turn off highlighting and clear any message already
 " displayed.
@@ -83,6 +90,12 @@ let g:pep8_map='<leader>8'
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType="context"
 set completeopt=menuone,longest,preview
+
+" Configure ctrlp.vim to ignore things that I may still want to
+" open using vim.
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\vve/',
+  \ }
 
 " }}}
 
@@ -136,5 +149,4 @@ function! HgCiDiff()
     setlocal spell spelllang=en_us
     cnoremap wq wqa
     cnoremap q qa!
-    startinsert
 endfunction
