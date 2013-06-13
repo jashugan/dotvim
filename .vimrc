@@ -10,13 +10,13 @@ set wildignore=*.pyc,*~
 
 " Incremental searching. Highlights and moves screen, but not cursor to
 " next matching word, you still need to press enter to jump cursor to
-" match 
+" match
 set incsearch
 
 " Highlights search results
 set hlsearch
 
-" Allow switching out of modified buffers without having to 
+" Allow switching out of modified buffers without having to
 " save them first.
 set hidden
 
@@ -54,9 +54,9 @@ nnoremap <c-h> <c-w>h
 " copy everything under the cursor until the end of the line.
 nnoremap Y y$
 
-" Escape out of insert mode. Disable normal <esc> for now. 
-inoremap jk <esc>
-inoremap <esc> <nop>
+" Escape out of insert mode. Disable normal <esc> for now.
+" inoremap jk <esc>
+" inoremap <esc> <nop>
 
 " Press Space to turn off highlighting and clear any message already
 " displayed.
@@ -96,6 +96,12 @@ set completeopt=menuone,longest,preview
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\vve/',
   \ }
+let g:ctrlp_working_path_mode = 'rw'
+
+" Delete all trailing whitespace -- change action to 'delete' if
+" you get tired of it constantly asking you on save.
+let g:DeleteTrailingWhitespace = 1
+let g:DeleteTrailingWhitespace_Action = 'delete'
 
 " }}}
 
@@ -124,7 +130,7 @@ filetype plugin indent on
 let g:pyindent_open_paren = '&sw'
 let g:pyindent_continue = '&sw'
 
-" Function to show diff when doing mercurial commits. It opens a new split 
+" Function to show diff when doing mercurial commits. It opens a new split
 " with diff inside.  (http://stackoverflow.com/questions/8009333/vim-show-diff-on-commit-in-mercurial)
 " You must put this in your .hgrc:
 "   editor = vim "+call HgCiDiff()"
